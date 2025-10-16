@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.hero {
+  @include section-hero;
+  padding-top: 8rem; // Account for fixed header
+}
+
+.heroContent {
+  max-width: 600px;
+}
+
+.heroTitle {
+  @include heading-1;
+  margin-bottom: $spacing-6;
+}
+
+.heroSubtitle {
+  @include body-large;
+  margin-bottom: $spacing-8;
+  color: $text-light;
+}
+
+.heroButtons {
+  display: flex;
+  gap: $spacing-4;
+  flex-wrap: wrap;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

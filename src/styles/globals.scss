@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import './variables';
+@import './mixins';
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  color: $text-dark;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default button styles */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Remove default link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid $accent-blue;
+  outline-offset: 2px;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-4 {
+  margin-bottom: $spacing-8;
+}
+
+.mt-4 {
+  margin-top: $spacing-8;
+}
+
+.mb-8 {
+  margin-bottom: $spacing-16;
+}
+
+.mt-8 {
+  margin-top: $spacing-16;
+}
+
+/* Container utility */
+.container {
+  @include container;
+}
+
+/* Section utility */
+.section {
+  @include section-padding;
+}
+
+.section-dark {
+  background: $primary-blue;
+  color: white;
+}
+
+.section-light {
+  background: $light-grey;
+  color: $text-dark;
+}
+
+.section-hero {
+  background: $primary-dark;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Typography utilities */
+.heading-1 {
+  @include heading-1;
+}
+
+.heading-2 {
+  @include heading-2;
+}
+
+.heading-3 {
+  @include heading-3;
+}
+
+.body-large {
+  @include body-large;
+}
+
+.body-medium {
+  @include body-medium;
+}
+
+.body-small {
+  @include body-small;
+}
+
+/* Button utilities */
+.btn-primary {
+  @include button-primary;
+}
+
+.btn-secondary {
+  @include button-secondary;
+}
+
+.btn-accent {
+  @include button-accent;
+}
+
+/* Grid utilities */
+.grid-2 {
+  @include grid-2;
+}
+
+.grid-4 {
+  @include grid-4;
+}
+
+/* Card utilities */
+.card {
+  @include card;
+}
+
+.card-dark {
+  @include card-dark;
+}
+
+/* Animation utilities */
+.fade-in-up {
+  @include fade-in-up;
+}

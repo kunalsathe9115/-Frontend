@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background: $light-grey;
+  color: $text-dark;
+}
+
+.content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  @include heading-2;
+  color: $text-dark;
+  margin-bottom: $spacing-6;
+}
+
+.subtitle {
+  @include body-large;
+  color: $text-muted;
+  margin-bottom: $spacing-8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

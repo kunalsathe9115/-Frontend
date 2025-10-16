@@ -1,0 +1,108 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background: $light-grey;
+  color: $text-dark;
+}
+
+.contactGrid {
+  @include grid-2;
+}
+
+.contactForm {
+  max-width: 500px;
+}
+
+.contactLabel {
+  font-size: $text-sm;
+  font-weight: $font-semibold;
+  color: $accent-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $spacing-4;
+}
+
+.title {
+  @include heading-2;
+  color: $text-dark;
+  margin-bottom: $spacing-4;
+}
+
+.subtitle {
+  @include body-large;
+  color: $text-muted;
+  margin-bottom: $spacing-8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: $font-semibold;
+  margin-bottom: $spacing-2;
+  color: $text-dark;
+}
+
+.input {
+  @include form-input;
+}
+
+.textarea {
+  @include form-textarea;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-2;
+}
+
+.checkbox {
+  margin-top: $spacing-1;
+}
+
+.checkboxLabel {
+  font-size: $text-sm;
+  color: $text-muted;
+  margin: 0;
+}
+
+.contactInfo {
+  max-width: 400px;
+}
+
+.contactItem {
+  margin-bottom: $spacing-8;
+}
+
+.contactTitle {
+  font-size: $text-lg;
+  font-weight: $font-bold;
+  margin-bottom: $spacing-2;
+  color: $text-dark;
+}
+
+.contactText {
+  color: $text-muted;
+  margin-bottom: $spacing-1;
+}
+
+.contactLink {
+  color: $accent-blue;
+  text-decoration: none;
+  transition: color $transition-normal;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,100 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.header {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: $spacing-4 0;
+  box-shadow: $shadow-md;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: $text-2xl;
+  font-weight: $font-bold;
+  color: $text-dark;
+  text-decoration: none;
+  transition: color $transition-normal;
+
+  &:hover {
+    color: $accent-blue;
+  }
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: $spacing-8;
+
+  @include mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: $spacing-6;
+    box-shadow: $shadow-lg;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all $transition-normal;
+    gap: $spacing-4;
+  }
+
+  &.navMenuOpen {
+    @include mobile {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.navLink {
+  color: $text-dark;
+  font-weight: $font-medium;
+  text-decoration: none;
+  transition: color $transition-normal;
+  padding: $spacing-2 0;
+
+  &:hover {
+    color: $accent-blue;
+  }
+
+  @include mobile {
+    color: $text-dark;
+    font-size: $text-lg;
+  }
+}
+
+.mobileMenuButton {
+  display: none;
+  flex-direction: column;
+  gap: $spacing-1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-2;
+
+  @include mobile {
+    display: flex;
+  }
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: $text-dark;
+  transition: all $transition-normal;
+  border-radius: 2px;
+}

@@ -1,0 +1,79 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background: $primary-blue;
+  color: white;
+}
+
+.enterpriseGrid {
+  @include grid-2;
+  align-items: flex-start;
+}
+
+.enterpriseContent {
+  max-width: 500px;
+}
+
+.featureLabel {
+  font-size: $text-sm;
+  font-weight: $font-semibold;
+  color: $accent-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $spacing-4;
+}
+
+.title {
+  @include heading-2;
+  margin-bottom: $spacing-6;
+}
+
+.learnMore {
+  color: white;
+  text-decoration: none;
+  font-weight: $font-semibold;
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+  transition: all $transition-normal;
+
+  &:hover {
+    color: $accent-blue;
+    border-bottom-color: $accent-blue;
+  }
+}
+
+.enterpriseFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-6;
+}
+
+.enterpriseFeature {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-4;
+}
+
+.enterpriseIcon {
+  @include icon-circle;
+  flex-shrink: 0;
+}
+
+.enterpriseFeatureContent {
+  flex: 1;
+}
+
+.featureTitle {
+  font-size: $text-lg;
+  font-weight: $font-bold;
+  margin-bottom: $spacing-2;
+  color: white;
+}
+
+.featureDescription {
+  @include body-small;
+  color: $text-muted-light;
+  margin: 0;
+}

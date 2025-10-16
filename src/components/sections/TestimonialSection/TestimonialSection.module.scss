@@ -1,0 +1,78 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background: $primary-blue;
+  color: white;
+}
+
+.testimonialGrid {
+  @include grid-2;
+}
+
+.testimonialContent {
+  max-width: 500px;
+}
+
+.title {
+  @include heading-2;
+  margin-bottom: $spacing-6;
+}
+
+.description {
+  @include body-large;
+  color: $text-light;
+}
+
+.testimonialCard {
+  @include card-dark;
+  padding: $spacing-8;
+}
+
+.testimonialLabel {
+  font-size: $text-sm;
+  font-weight: $font-semibold;
+  color: $accent-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $spacing-4;
+}
+
+.testimonialText {
+  @include body-large;
+  color: white;
+  font-style: italic;
+  margin-bottom: $spacing-6;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: $spacing-4;
+}
+
+.authorAvatar {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: $radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-dark;
+  font-weight: $font-bold;
+  font-size: $text-lg;
+}
+
+.authorInfo h4 {
+  font-weight: $font-semibold;
+  color: white;
+  margin-bottom: $spacing-1;
+}
+
+.authorInfo p {
+  @include body-small;
+  color: $text-muted-light;
+  margin: 0;
+}

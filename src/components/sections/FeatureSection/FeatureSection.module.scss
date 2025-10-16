@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background: $primary-blue;
+  color: white;
+}
+
+.featureBlock {
+  @include grid-2;
+  margin-bottom: $spacing-16;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.featureContent {
+  max-width: 500px;
+}
+
+.featureLabel {
+  font-size: $text-sm;
+  font-weight: $font-semibold;
+  color: $accent-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $spacing-4;
+}
+
+.featureTitle {
+  @include heading-3;
+  margin-bottom: $spacing-4;
+}
+
+.featureDescription {
+  @include body-large;
+  margin-bottom: $spacing-6;
+  color: $text-light;
+}
+
+.learnMore {
+  color: white;
+  text-decoration: none;
+  font-weight: $font-semibold;
+  border-bottom: 1px solid white;
+  padding-bottom: 2px;
+  transition: all $transition-normal;
+
+  &:hover {
+    color: $accent-blue;
+    border-bottom-color: $accent-blue;
+  }
+}
+
+.featureImage {
+  width: 100%;
+  height: 300px;
+  background: $border-dark;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-muted-light;
+  font-size: $text-6xl;
+}

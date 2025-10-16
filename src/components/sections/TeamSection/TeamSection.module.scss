@@ -1,0 +1,102 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background: $primary-blue;
+  color: white;
+}
+
+.teamGrid {
+  @include grid-2;
+  align-items: flex-start;
+}
+
+.teamContent {
+  max-width: 500px;
+}
+
+.teamLabel {
+  font-size: $text-sm;
+  font-weight: $font-semibold;
+  color: $accent-blue;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $spacing-4;
+}
+
+.title {
+  @include heading-2;
+  margin-bottom: $spacing-6;
+}
+
+.description {
+  @include body-large;
+  color: $text-light;
+}
+
+.teamMembers {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-8;
+}
+
+.teamMember {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-4;
+}
+
+.memberAvatar {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: $radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-dark;
+  font-weight: $font-bold;
+  font-size: $text-lg;
+  flex-shrink: 0;
+}
+
+.memberInfo {
+  flex: 1;
+}
+
+.memberName {
+  font-size: $text-lg;
+  font-weight: $font-bold;
+  margin-bottom: $spacing-1;
+  color: white;
+}
+
+.memberTitle {
+  @include body-small;
+  color: $text-muted-light;
+  margin-bottom: $spacing-2;
+}
+
+.memberDescription {
+  @include body-small;
+  color: $text-muted-light;
+  margin-bottom: $spacing-2;
+}
+
+.memberSocial {
+  display: flex;
+  gap: $spacing-2;
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+  color: $text-muted-light;
+  cursor: pointer;
+  transition: color $transition-normal;
+
+  &:hover {
+    color: white;
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.splitCta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 400px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ctaContent {
+  background: $primary-blue;
+  color: white;
+  padding: $spacing-16;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include mobile {
+    padding: $spacing-8;
+  }
+}
+
+.title {
+  @include heading-2;
+  margin-bottom: $spacing-6;
+}
+
+.description {
+  @include body-large;
+  color: $text-light;
+  margin-bottom: $spacing-8;
+}
+
+.ctaImage {
+  background: $light-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-muted;
+  font-size: $text-6xl;
+}

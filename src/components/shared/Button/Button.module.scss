@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.button {
+  @include button-primary;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all $transition-normal;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+
+  // Variants
+  &.primary {
+    @include button-primary;
+  }
+
+  &.secondary {
+    @include button-secondary;
+  }
+
+  &.accent {
+    @include button-accent;
+  }
+
+  // Sizes
+  &.small {
+    padding: $spacing-2 $spacing-4;
+    font-size: $text-sm;
+  }
+
+  &.medium {
+    padding: $spacing-3 $spacing-6;
+    font-size: $text-base;
+  }
+
+  &.large {
+    padding: $spacing-4 $spacing-8;
+    font-size: $text-lg;
+  }
+}

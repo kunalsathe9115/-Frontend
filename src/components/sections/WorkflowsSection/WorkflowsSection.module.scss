@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.section {
+  @include section-padding;
+  background: $light-grey;
+  color: $text-dark;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  @include heading-2;
+  color: $text-dark;
+  margin-bottom: $spacing-6;
+}
+
+.subtitle {
+  @include body-large;
+  color: $text-muted;
+  margin-bottom: $spacing-12;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.workflowCards {
+  @include grid-4;
+}
+
+.workflowCard {
+  text-align: center;
+}
+
+.workflowIcon {
+  @include icon-large;
+  background: #f3f4f6;
+  color: $text-dark;
+}
+
+.workflowTitle {
+  font-size: $text-lg;
+  font-weight: $font-bold;
+  margin-bottom: $spacing-2;
+  color: $text-dark;
+}
+
+.workflowDescription {
+  @include body-small;
+  color: $text-muted;
+}
