@@ -42,12 +42,13 @@ const ProblemSection = () => {
       <section className={styles.section}>
         <Container>
           <div className={styles.problemGrid}>
-            <div className={styles.problemContent}>
+            <div  className={styles.problemContent}>
+            <div style={{background: "#002336" }}>
               <h3 className={styles.problemTitle}>Knowledge Walks Out the Door</h3>
               <p className={styles.problemDescription}>
                 Critical business knowledge lives in people's heads, not in your systems. 
                 When team members leave, their expertise goes with them.
-              </p>
+              </p> </div>
               <div className={styles.problemImage}>📊</div>
             </div>
             <div className={styles.problemCards}>

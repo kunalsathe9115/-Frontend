@@ -3,7 +3,32 @@
 
 .hero {
   @include section-hero;
-  padding-top: 8rem; // Account for fixed header
+  padding-top: 8rem;
+  height: 960px;
+  min-height: 960px;
+  background-color: #1a1a1a; // Fallback color
+  background-image: 
+    linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)),
+    url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1360&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  
+  
+  .container {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .heroContent {

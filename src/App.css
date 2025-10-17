@@ -151,11 +151,11 @@ body {
 
 /* Section Styles */
 .section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 .section-dark {
-  background: #1e3a8a;
+  background: #002F48;
   color: white;
 }
 
@@ -556,7 +556,7 @@ body {
 }
 
 .cta-content {
-  background: #1e3a8a;
+  background: #002F48;
   color: white;
   padding: 4rem;
   display: flex;
@@ -812,7 +812,7 @@ body {
 
 /* Footer */
 .footer {
-  background: #1e3a8a;
+  background: #002F48;
   color: white;
   padding: 4rem 0 2rem;
 }
